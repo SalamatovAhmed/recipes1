@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Tenor Sans', sans-serif;
+    overflow: hidden;
+}
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #8b4513 0%, #d2691e 40%, #f4a460 70%, #ffdead 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 10px;
+    color: #5c3012;
+}
+.back-circle {
+    width: 35px; height: 35px; border: 2px solid #edc214;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: #edc214; cursor: pointer;
+}
+.logo-text { font-size: 1.5rem; letter-spacing: 3px; }
+
+/* Категории */
+.tags-row {
+    display: flex; gap: 8px;
+    padding: 10px 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.category-tag {
+    background: #5c3012; color: white;
+    font-size: 0.65rem; padding: 6px 14px;
+    border-radius: 5px; white-space: nowrap; cursor: pointer;
+}
+
+/* Поиск */
+.search-wrap { padding: 5px 20px 15px; display: flex; }
+.search-wrap input {
+    flex: 1; border: none; padding: 12px;
+    border-radius: 10px 0 0 10px; outline: none;
+}
+.search-wrap button {
+    border: none; background: #edc214; padding: 0 15px;
+    border-radius: 0 10px 10px 0; color: #5c3012;
+}
+
+/* СЕТКА (как на фото 2) */
+.recipe-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Две колонки на мобильных */
+    gap: 15px;
+    padding: 10px 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recipe-card h3 {
+    font-size: 0.8rem;
+    margin: 8px 0;
+    color: #5c3012;
+    text-transform: uppercase;
+}
+
+.recipe-card .ingredients-list {
+    font-size: 0.65rem;
+    color: #777;
+    white-space: pre-wrap;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Навигация */
+.nav-bottom {
+    background: white; height: 70px;
+    display: flex; justify-content: space-around; align-items: center;
+    border-radius: 25px 25px 0 0;
+}
+.nav-bottom i { color: #d2b48c; font-size: 1.5rem; }
+.nav-plus {
+    width: 45px; height: 45px; border: 2px solid #edc214;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: #edc214; cursor: pointer;
+}
